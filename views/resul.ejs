@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+   <h1> Last update: <%= confir[confir.length -1].Date %></h1>
+    
+    <table class="table table-striped">
+        <thead class="thead-light">
+            <tr>
+                <th>Country</th>
+                <th>Province</th>
+                <th>Date</th>
+                <th>Confirmed</th>
+                <th>Deaths</th>
+                <th>Recovred</th>
+    
+            </tr>
+
+        </thead>
+        <tbody>
+            <% for(var i = confir.length-1; i>=0; i--) { %>
+                <tr>
+                    
+                    <td><%= confir[i].Country %></td>
+                    <td><%= confir[i].Province %></td>
+                    <td><%= confir[i].Date %></td>
+                    <td><%= confir[i].Cases %></td>
+                    <td><%= death[i].Cases %></td>
+                    <td><%= recov[i].Cases %></td>
+        
+                </tr>
+            <% } %>
+
+        </tbody>
+        
+       
+    </table>
+        
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+</body>
+
+</html>
